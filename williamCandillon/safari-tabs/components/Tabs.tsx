@@ -37,8 +37,8 @@ export default ({ tabs: tabsProps }: TabsProps) => {
 
   const transitionValue = useTransition(
     selectedTab,
-    eq(selectedTab, OVERVIEW),
     neq(selectedTab, OVERVIEW),
+    eq(selectedTab, OVERVIEW),
     durationMs,
     easing
   );
@@ -53,7 +53,7 @@ export default ({ tabs: tabsProps }: TabsProps) => {
       0
     );
     return {
-      translateY: bInterpolate(transitionValue, translateY1, 0),
+      translateY: bInterpolate(transitionValue, 0, translateY1),
       gestureHandler: onGestureEvent({
         state,
         translationY,

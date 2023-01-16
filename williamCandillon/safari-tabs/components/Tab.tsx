@@ -36,7 +36,7 @@ export default ({
   const H = -height / 2;
   const position = index > selectedTab ? height : 0;
   const top = selectedTab === OVERVIEW ? index * 150 : position;
-  const rotateX = bInterpolate(transition, -Math.PI / 6, 0);
+  const rotateX = bInterpolate(transition, 0, -Math.PI / 6);
   const z = multiply(H, sin(abs(rotateX)));
   const transform = [
     { perspective },

@@ -62,14 +62,14 @@ export default ({
 
   Animated.useCode(
     Animated.cond(
-      approximates(Animated.abs(translateX), EXTREMITY),
+      approximates(Animated.abs(translateX), EXTREMITY, 10),
       Animated.call([], closeTab)
     ),
-    [closeTab]
+    [closeTab, translateX]
   );
 
   return (
-    <PanGestureHandler {...gestureHandler}>
+    <PanGestureHandler activeOffsetX={[-10, 10]} {...gestureHandler}>
       <Animated.View
         style={[styles.container, { transform: [{ translateX }] }]}
       >
