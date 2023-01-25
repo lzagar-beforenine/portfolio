@@ -22,7 +22,7 @@
 
 type IsUnion<TValue, Type = TValue> = [TValue] extends [never]
   ? false
-  : Type extends TValue
+  : TValue extends TValue
   ? [Type] extends [TValue]
     ? false
     : true
