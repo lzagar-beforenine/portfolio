@@ -27,13 +27,11 @@ type Fill<
   Index extends number[] = [],
   Result extends unknown[] = [],
   IsChanging extends boolean = false
-> = Start extends End
-  ? TArray
-  : TArray extends [infer First, ...infer Rest]
-  ? Index["length"] extends Start
-    ? Fill<Rest, TValue, Start, End, [...Index, 0], [...Result, TValue], true>
-    : Index["length"] extends End
+> = TArray extends [infer First, ...infer Rest]
+  ? Index["length"] extends End
     ? [...Result, First, ...Rest]
+    : Index["length"] extends Start
+    ? Fill<Rest, TValue, Start, End, [...Index, 0], [...Result, TValue], true>
     : IsChanging extends true
     ? Fill<Rest, TValue, Start, End, [...Index, 0], [...Result, TValue], true>
     : Fill<Rest, TValue, Start, End, [...Index, 0], [...Result, First], false>
@@ -41,7 +39,6 @@ type Fill<
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from "@type-challenges/utils";
-import { IndexKind } from "typescript";
 
 type cases = [
   Expect<Equal<Fill<[], 0>, []>>,
