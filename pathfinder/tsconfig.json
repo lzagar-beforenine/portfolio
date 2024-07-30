@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "strict": true,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+     "@src/*": ["src/*"],
+     "@tests/*": ["__tests__/*"],
+     "@mock/*": ["__mock__/*"]
+    },
+    "skipLibCheck": true
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "jest.config.js"],
+  "exclude": ["node_modules"]
+}
