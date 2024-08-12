@@ -1,4 +1,4 @@
-import Pathfinder from '@src/model/pathfinder';
+import Pathfinder from '@src/classes/pathfinder';
 import { Coordinates, NextCoordinates } from '@src/types';
 
 type Basic = {

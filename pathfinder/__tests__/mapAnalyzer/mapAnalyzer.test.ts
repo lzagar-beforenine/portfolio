@@ -1,4 +1,4 @@
-import MapAnalyzer from '@src/model/mapAnalyzer';
+import MapAnalyzer from '@src/classes/mapAnalyzer';
 import { GET_PATH_INFO_INPUTS } from './data/pathInfoData';
 import { convertToGrid } from '@tests/utils';
 import { ErrorWithStatusCode } from '@src/constants/pathfinder/errors';

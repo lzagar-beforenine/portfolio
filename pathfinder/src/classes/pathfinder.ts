@@ -6,7 +6,7 @@ import {
   START_CHAR,
 } from '@src/constants/pathfinder/data';
 import { Direction, ErrorCode } from '@src/constants/pathfinder/enums';
-import MapAnalyzer from '@src/model/mapAnalyzer';
+import MapAnalyzer from '@src/classes/mapAnalyzer';
 
 import {
   calculateNewCoordinates,

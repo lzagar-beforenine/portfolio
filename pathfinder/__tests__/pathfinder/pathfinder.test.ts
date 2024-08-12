@@ -1,4 +1,4 @@
-import Pathfinder from '@src/model/pathfinder';
+import Pathfinder from '@src/classes/pathfinder';
 import { ErrorWithStatusCode } from '@src/constants/pathfinder/errors';
 import { INVALID_INPUTS } from '@tests/pathfinder/data/invalidIntegrationData';
 import { VALID_INTEGRATION_INPUTS } from '@tests/pathfinder/data/validIntegrationData';
